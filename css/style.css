@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: #000000dd;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainpage {
+  text-align: center;
+  
+}
+.mainpage img {
+  width: 100%;
+  height: auto; 
+}
+#cartIcon {
+  cursor: pointer;
+  font-size: 24px;
+  margin-right: 20px;
+}
+#cart {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  z-index: 1;
+}
+#cart h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+#cartItems {
+  list-style-type: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+#totalPriceDisplay {
+  font-size: 16px;
+  margin-top: 10px;
+  display: none;
+}
+.logo {
+opacity: 0.1;
+}
+.nav-links {
+    display: flex;
+}
+.nav-links a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+.signup-login {
+    margin-right: 20px;
+}
+.container {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4ca8af;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #39668b;
+  }
+  .product {
+    border: 1px solid #ccc;
+    margin: 1px;
+    padding: 10px;
+    width: 20vw;
+    height: 45vh;
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+}
+.product img {
+    width: 13vw;
+    height: 25vh;
+}
+.pbutton{
+  padding: 1px;
+  margin-top: 5px;
+  height: 10%;
+  
+}
+#cart {
+  opacity: 0.8;
+    margin-top: 20px;
+    color: #333;
+}

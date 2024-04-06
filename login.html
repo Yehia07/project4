@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/all.css"/>
+        <title>Login</title>
+      </head>
+      <body>
+    <header>
+        <div class="logo"><img src="images/logo.jpg"></div>
+        <nav class="nav-links">
+          <a href="index.html">HOME</a>
+          <a href="#">WHAT'S NEW</a>
+          <a href="#">ABOUT US</a>
+        </nav>
+        <div class="signup-login">
+          <button id="signupButton">Sign Up</button>
+        </div>
+      </header>
+  <h2>Login</h2>
+  <form id="loginForm">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+    </div>
+
+    <div>
+      <button type="submit">Login</button>
+    </div>
+    <p id="errorMessage" style="color: red; display: none;">Incorrect username or password. Please try again.</p>
+  </form>
+
+  <script src="login.js"></script>
+  <script>
+    
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+
+  if (!username || !password) {
+      alert('Please fill in all fields.');
+      return;
+  }
+
+  var storedUserData = localStorage.getItem(username);
+
+  if (storedUserData) {
+      var userData = JSON.parse(storedUserData);
+      if (password === userData.password) {
+          localStorage.setItem('rememberedUser', username);
+          window.location.href = 'home.html';
+      } else {
+          alert('Invalid username or password. Please try again.');
+      }
+  } else {
+      alert('User not found. Please sign up.');
+  }
+});
+
+    var signupButton = document.getElementById('signupButton');
+    signupButton.onclick = function() {
+      window.location.href = 'signup.html';
+    };
+  </script>
+</body>
+</html>
+
